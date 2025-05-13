@@ -198,26 +198,39 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Περιμένουμε κάθε φορά που ανοίγει ένα lightbox
-    document.addEventListener('click', function (e) {
-      // Αν η Lightbox εικόνα είναι ανοιχτή
+    // Περιμένουμε για δυναμικά στοιχεία της Lightbox
+    const observer = new MutationObserver(() => {
+      const image = document.querySelector('.lb-image');
       const overlay = document.querySelector('.lightboxOverlay');
       const closeBtn = document.querySelector('.lb-close');
 
-      if (!overlay || !closeBtn) return;
-
-      // Αν πατήσει πάνω στην εικόνα
-      if (e.target.classList.contains('lb-image')) {
-        closeBtn.click();
+      // Αν βρέθηκε η εικόνα (δηλαδή έχει ανοίξει το lightbox)
+      if (image && closeBtn) {
+        // Αν δεν έχει ήδη listener
+        if (!image.dataset.listenerAttached) {
+          image.addEventListener('click', () => {
+            closeBtn.click();
+          });
+          image.dataset.listenerAttached = "true";
+        }
       }
 
-      // Αν πατήσει στο σκοτεινό background
-      if (e.target.classList.contains('lightboxOverlay')) {
-        closeBtn.click();
+      // Προσθέτουμε click και στο background (προαιρετικό)
+      if (overlay && closeBtn) {
+        overlay.addEventListener('click', function (e) {
+          // Μόνο αν πατήσει απευθείας στο overlay (όχι σε άλλο στοιχείο μέσα του)
+          if (e.target.classList.contains('lightboxOverlay')) {
+            closeBtn.click();
+          }
+        });
       }
     });
+
+    // Ξεκινάμε τον παρατηρητή για αλλαγές στο body (Lightbox προσθέτει τα στοιχεία δυναμικά)
+    observer.observe(document.body, { childList: true, subtree: true });
   });
 </script>
+
 
 
 
