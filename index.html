@@ -3,78 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Βιοτεχνία Πλεκτών - Αφοί Στεφανίδη | Πλεκτά Κορυδαλλός</title>
-  <meta name="description" content="Πλεκτά ρούχα υψηλής ποιότητας από τη βιοτεχνία Αφοί Στεφανίδη στον Κορυδαλλό. Ζακέτες, μπλούζες, φανέλες και κολάν. Χονδρική πώληση γυναικείων πλεκτών.">
-  <meta name="keywords" content="πλεκτά, στεφανίδης, βιοτεχνία πλεκτών, κορυδαλλός, πλεκτά κορυδαλλός, πλεκτές ζακέτες, πλεκτές μπλούζες, χονδρική πώληση πλεκτών, γυναικεία πλεκτά">
+  <title>Αφοί Στεφανίδη | Βιοτεχνία Πλεκτών Κορυδαλλός</title>
+  <meta name="description" content="Γυναικεία πλεκτά ρούχα ελληνικής κατασκευής, χονδρική πώληση. Ζακέτες, μπλούζες, φούστες, κολάν - Αφοί Στεφανίδη στον Κορυδαλλό.">
+  <meta name="keywords" content="πλεκτά, στεφανίδης, κορυδαλλός, ζακέτες, χονδρική, φανέλες, ελληνική παραγωγή">
   <meta name="author" content="Αφοί Στεφανίδη">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
-      background-color: #e9f5fb;
       margin: 0;
       padding: 0;
       color: #333;
+      background-color: #fdfdfd;
     }
 
     header {
-      background: linear-gradient(to right, #4a90e2, #50e3c2);
-      color: white;
+      background: linear-gradient(to right, #1d3557, #457b9d);
+      color: #fff;
       text-align: center;
-      padding: 60px 20px;
-      position: relative;
+      padding: 70px 20px 50px;
     }
 
-    .logo {
-      max-width: 400px;
-      margin: 0 auto 20px;
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin-bottom: 10px;
     }
 
     header p {
-      font-size: 1.5em;
-      font-weight: bold;
+      font-size: 1.2em;
+      font-weight: 300;
     }
 
     section {
-      padding: 40px 20px;
       max-width: 1000px;
       margin: 40px auto;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 40px 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
     }
 
-    h1, h2 {
+    h2 {
       font-family: 'Playfair Display', serif;
-      color: #4a90e2;
+      color: #1d3557;
+      font-size: 1.8em;
+      margin-bottom: 20px;
     }
 
     ul li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .photos {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
-      justify-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
     }
 
-    .photos img {
+    .photos a img {
       width: 100%;
       height: auto;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
 
-    a {
-      color: #4a90e2;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+    .photos a img:hover {
+      transform: scale(1.03);
     }
 
     iframe {
@@ -82,50 +79,42 @@
       height: 400px;
       border: none;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     footer {
+      background-color: #f1f1f1;
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
-      background-color: #f1f1f1;
       color: #666;
+    }
+
+    a {
+      color: #1d3557;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">
-    <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
-      <text x="0" y="35" font-size="24" fill="#f4d2c2" font-family="Georgia, serif">Βιοτεχνία Πλεκτών</text>
-      <path d="M10,80 Q30,40 50,80 L80,20 H100" stroke="#ffffff" stroke-width="6" fill="none" />
-      <circle cx="40" cy="60" r="7" fill="#f4d2c2" />
-      <text x="90" y="70" font-size="30" fill="#ffffff" font-family="Georgia, serif">Αφοί Στεφανίδη</text>
-    </svg>
-  </div>
-  <p>Πλεκτά υψηλής ποιότητας Ελληνικής κατασκευής Χονδρική Πώληση</p>
+  <h1>Αφοί Στεφανίδη</h1>
+  <p>Βιοτεχνία Πλεκτών | Ελληνική Ποιότητα - Χονδρική Πώληση</p>
 </header>
 
 <section>
   <h2>Σχετικά με εμάς</h2>
-  <p>
-    Η <strong>Βιοτεχνία Πλεκτών Αφοί Στεφανίδη</strong> είναι μια οικογενειακή επιχείρηση που δραστηριοποιείται με επιτυχία στον χώρο της πλεκτικής στον <strong>Κορυδαλλό</strong> εδώ και δεκαετίες. Εξειδικευόμαστε στην κατασκευή και <strong>χονδρική πώληση γυναικείων πλεκτών ρούχων</strong> υψηλής ποιότητας.
-  </p>
-  <p>
-    Όλα μας τα πλεκτά ράβονται στην Ελλάδα, με έμφαση στην ποιότητα και την αντοχή. Διαθέτουμε μεγάλη ποικιλία σε <strong>πλεκτές μπλούζες, ζακέτες, φούστες, κολάν</strong> και φανέλες, ιδανικές για καταστήματα και επαγγελματίες.
-  </p>
-  <p>
-    Είμαστε υπερήφανοι που η <strong>βιοτεχνία πλεκτών Στεφανίδη</strong> αποτελεί σημείο αναφοράς για την ποιότητα, την εξυπηρέτηση και την εμπιστοσύνη στην περιοχή του <strong>Κορυδαλλού</strong> και όχι μόνο.
-  </p>
+  <p>Η <strong>Βιοτεχνία Πλεκτών Αφοί Στεφανίδη</strong> δραστηριοποιείται στον χώρο της γυναικείας πλεκτικής ένδυσης από τον Κορυδαλλό, προσφέροντας ελληνικής κατασκευής ρούχα υψηλής ποιότητας.</p>
+  <p>Προσφέρουμε προϊόντα ιδανικά για επαγγελματίες και καταστήματα σε χονδρική πώληση.</p>
   <ul>
     <li>Πλεκτές μπλούζες</li>
-    <li>Πλεκτές ζακέτες</li>
-    <li>Πλεκτές φούστες</li>
-    <li>Πλεκτά κολάν</li>
-    <li>Γυναικεία πλεκτά</li>
-    <li>Κλασικά πλεκτά ρούχα</li>
+    <li>Ζακέτες</li>
+    <li>Φούστες</li>
+    <li>Κολάν</li>
     <li>Φανέλες (70% μαλλί - 30% ακρυλικό)</li>
   </ul>
 </section>
@@ -146,16 +135,16 @@
 <section>
   <h2>Φωτογραφίες Προϊόντων</h2>
   <div class="photos">
-    <img src="file.jpg" alt="Πλεκτή μπλούζα 1">
-    <img src="file1.jpg" alt="Πλεκτή μπλούζα 2">
-    <img src="file2.jpg" alt="Πλεκτή Ζακέτα 1">
-    <img src="file3.jpg" alt="Πλεκτή Ζακέτα 2">
-    <img src="file4.jpg" alt="Πλεκτό Κολάν 1">
-    <img src="file5.jpg" alt="Πλεκτό Κολάν 2">
-    <img src="file6.jpg" alt="Πλεκτή Φούστα 1">
-    <img src="file7.jpg" alt="Πλεκτή Φούστα 2">
-    <img src="file8.jpg" alt="Φανέλα 1">
-    <img src="file9.jpg" alt="Φανέλα 2">
+    <a href="file.jpg" data-lightbox="gallery" data-title="Πλεκτή μπλούζα 1"><img src="file.jpg" alt="Πλεκτή μπλούζα 1"></a>
+    <a href="file1.jpg" data-lightbox="gallery" data-title="Πλεκτή μπλούζα 2"><img src="file1.jpg" alt="Πλεκτή μπλούζα 2"></a>
+    <a href="file2.jpg" data-lightbox="gallery" data-title="Ζακέτα 1"><img src="file2.jpg" alt="Ζακέτα 1"></a>
+    <a href="file3.jpg" data-lightbox="gallery" data-title="Ζακέτα 2"><img src="file3.jpg" alt="Ζακέτα 2"></a>
+    <a href="file4.jpg" data-lightbox="gallery" data-title="Κολάν 1"><img src="file4.jpg" alt="Κολάν 1"></a>
+    <a href="file5.jpg" data-lightbox="gallery" data-title="Κολάν 2"><img src="file5.jpg" alt="Κολάν 2"></a>
+    <a href="file6.jpg" data-lightbox="gallery" data-title="Φούστα 1"><img src="file6.jpg" alt="Φούστα 1"></a>
+    <a href="file7.jpg" data-lightbox="gallery" data-title="Φούστα 2"><img src="file7.jpg" alt="Φούστα 2"></a>
+    <a href="file8.jpg" data-lightbox="gallery" data-title="Φανέλα 1"><img src="file8.jpg" alt="Φανέλα 1"></a>
+    <a href="file9.jpg" data-lightbox="gallery" data-title="Φανέλα 2"><img src="file9.jpg" alt="Φανέλα 2"></a>
   </div>
 </section>
 
@@ -164,8 +153,7 @@
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.2519442397876!2d23.65378441531757!3d37.9867265797191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1be42f43e01d3%3A0x9db58ec93d49a53a!2sZoodochou%20Pigis%2012%2C%20Korydallos%20181%2020!5e0!3m2!1sel!2sgr!4v1682689381714!5m2!1sel!2sgr"
     allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
+    loading="lazy">
   </iframe>
 </section>
 
@@ -173,5 +161,7 @@
   &copy; 2025 Αφοί Στεφανίδη. Όλα τα δικαιώματα διατηρούνται.
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>
+
