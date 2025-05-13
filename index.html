@@ -2,13 +2,18 @@
 <html lang="el">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Βιοτεχνία Πλεκτών - Αφοί Στεφανίδη | Πλεκτά Κορυδαλλός</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Βιοτεχνία Πλεκτών - Αφοί Στεφανίδη</title>
   <meta name="description" content="Πλεκτά ρούχα υψηλής ποιότητας από τη βιοτεχνία Αφοί Στεφανίδη στον Κορυδαλλό. Ζακέτες, μπλούζες, φανέλες και κολάν. Χονδρική πώληση γυναικείων πλεκτών.">
-  <meta name="keywords" content="πλεκτά, στεφανίδης, βιοτεχνία πλεκτών, κορυδαλλός, πλεκτά κορυδαλλός, πλεκτές ζακέτες, πλεκτές μπλούζες, χονδρική πώληση πλεκτών, γυναικεία πλεκτά">
+  <meta name="keywords" content="πλεκτά, στεφανίδης, βιοτεχνία πλεκτών, κορυδαλλός, πλεκτές ζακέτες, μπλούζες, χονδρική, γυναικεία πλεκτά">
   <meta name="author" content="Αφοί Στεφανίδη">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+
+  <!-- Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
@@ -30,16 +35,11 @@
       margin: 0 auto 20px;
     }
 
-    header p {
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-
     section {
       padding: 40px 20px;
       max-width: 1000px;
       margin: 40px auto;
-      background-color: white;
+      background: white;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
@@ -59,25 +59,23 @@
       gap: 20px;
     }
 
-    .photos a img {
-      width: 100%;
-      height: auto;
+    .photos a {
+      position: relative;
+      overflow: hidden;
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    .photos a img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
       transition: transform 0.3s ease;
+      display: block;
     }
 
-    .photos a img:hover {
+    .photos a:hover img {
       transform: scale(1.03);
-    }
-
-    a {
-      color: #2c3e50;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
 
     iframe {
@@ -91,11 +89,39 @@
     footer {
       text-align: center;
       padding: 20px;
+      background: #ecf0f1;
       font-size: 0.9em;
-      background-color: #ecf0f1;
       color: #666;
     }
+
+    a {
+      color: #2c3e50;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
+
+  <!-- SEO Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Βιοτεχνία Πλεκτών - Αφοί Στεφανίδη",
+    "image": "https://example.com/file.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ζωοδόχου Πηγής 12 & Πυθαγόρα",
+      "addressLocality": "Κορυδαλλός",
+      "postalCode": "18120",
+      "addressCountry": "GR"
+    },
+    "telephone": "+302104951582",
+    "url": "https://yourdomain.gr"
+  }
+  </script>
 </head>
 <body>
 
@@ -113,22 +139,14 @@
 
 <section>
   <h2>Σχετικά με εμάς</h2>
-  <p>
-    Η <strong>Βιοτεχνία Πλεκτών Αφοί Στεφανίδη</strong> είναι μια οικογενειακή επιχείρηση που δραστηριοποιείται με επιτυχία στον χώρο της πλεκτικής στον <strong>Κορυδαλλό</strong> εδώ και δεκαετίες. Εξειδικευόμαστε στην κατασκευή και <strong>χονδρική πώληση γυναικείων πλεκτών ρούχων</strong> υψηλής ποιότητας.
-  </p>
-  <p>
-    Όλα μας τα πλεκτά ράβονται στην Ελλάδα, με έμφαση στην ποιότητα και την αντοχή. Διαθέτουμε μεγάλη ποικιλία σε <strong>πλεκτές μπλούζες, ζακέτες, φούστες, κολάν</strong> και φανέλες, ιδανικές για καταστήματα και επαγγελματίες.
-  </p>
-  <p>
-    Είμαστε υπερήφανοι που η <strong>βιοτεχνία πλεκτών Στεφανίδη</strong> αποτελεί σημείο αναφοράς για την ποιότητα, την εξυπηρέτηση και την εμπιστοσύνη στην περιοχή του <strong>Κορυδαλλού</strong> και όχι μόνο.
-  </p>
+  <p>Η <strong>Βιοτεχνία Πλεκτών Αφοί Στεφανίδη</strong> είναι μια οικογενειακή επιχείρηση που δραστηριοποιείται στον <strong>Κορυδαλλό</strong>. Εξειδικευόμαστε στην <strong>χονδρική πώληση γυναικείων πλεκτών</strong>.</p>
+  <p>Όλα μας τα πλεκτά ράβονται στην Ελλάδα. Διαθέτουμε <strong>πλεκτές μπλούζες, ζακέτες, φούστες, κολάν</strong> και φανέλες για επαγγελματίες.</p>
   <ul>
     <li>Πλεκτές μπλούζες</li>
     <li>Πλεκτές ζακέτες</li>
     <li>Πλεκτές φούστες</li>
     <li>Πλεκτά κολάν</li>
     <li>Γυναικεία πλεκτά</li>
-    <li>Κλασικά πλεκτά ρούχα</li>
     <li>Φανέλες (70% μαλλί - 30% ακρυλικό)</li>
   </ul>
 </section>
@@ -149,16 +167,16 @@
 <section>
   <h2>Φωτογραφίες Προϊόντων</h2>
   <div class="photos">
-    <a href="file.jpg" data-lightbox="gallery" data-title="Πλεκτή μπλούζα 1"><img src="file.jpg" alt="Πλεκτή μπλούζα 1"></a>
-    <a href="file1.jpg" data-lightbox="gallery" data-title="Πλεκτή μπλούζα 2"><img src="file1.jpg" alt="Πλεκτή μπλούζα 2"></a>
-    <a href="file2.jpg" data-lightbox="gallery" data-title="Πλεκτή Ζακέτα 1"><img src="file2.jpg" alt="Πλεκτή Ζακέτα 1"></a>
-    <a href="file3.jpg" data-lightbox="gallery" data-title="Πλεκτή Ζακέτα 2"><img src="file3.jpg" alt="Πλεκτή Ζακέτα 2"></a>
-    <a href="file4.jpg" data-lightbox="gallery" data-title="Πλεκτό Κολάν 1"><img src="file4.jpg" alt="Πλεκτό Κολάν 1"></a>
-    <a href="file5.jpg" data-lightbox="gallery" data-title="Πλεκτό Κολάν 2"><img src="file5.jpg" alt="Πλεκτό Κολάν 2"></a>
-    <a href="file6.jpg" data-lightbox="gallery" data-title="Πλεκτή Φούστα 1"><img src="file6.jpg" alt="Πλεκτή Φούστα 1"></a>
-    <a href="file7.jpg" data-lightbox="gallery" data-title="Πλεκτή Φούστα 2"><img src="file7.jpg" alt="Πλεκτή Φούστα 2"></a>
-    <a href="file8.jpg" data-lightbox="gallery" data-title="Φανέλα 1"><img src="file8.jpg" alt="Φανέλα 1"></a>
-    <a href="file9.jpg" data-lightbox="gallery" data-title="Φανέλα 2"><img src="file9.jpg" alt="Φανέλα 2"></a>
+    <a href="file.jpg" data-lightbox="gallery" data-title="Πλεκτή μπλούζα 1"><img src="file.jpg" alt="Πλεκτή μπλούζα 1" loading="lazy"></a>
+    <a href="file1.jpg" data-lightbox="gallery" data-title="Πλεκτή μπλούζα 2"><img src="file1.jpg" alt="Πλεκτή μπλούζα 2" loading="lazy"></a>
+    <a href="file2.jpg" data-lightbox="gallery" data-title="Πλεκτή Ζακέτα 1"><img src="file2.jpg" alt="Πλεκτή Ζακέτα 1" loading="lazy"></a>
+    <a href="file3.jpg" data-lightbox="gallery" data-title="Πλεκτή Ζακέτα 2"><img src="file3.jpg" alt="Πλεκτή Ζακέτα 2" loading="lazy"></a>
+    <a href="file4.jpg" data-lightbox="gallery" data-title="Πλεκτό Κολάν 1"><img src="file4.jpg" alt="Πλεκτό Κολάν 1" loading="lazy"></a>
+    <a href="file5.jpg" data-lightbox="gallery" data-title="Πλεκτό Κολάν 2"><img src="file5.jpg" alt="Πλεκτό Κολάν 2" loading="lazy"></a>
+    <a href="file6.jpg" data-lightbox="gallery" data-title="Πλεκτή Φούστα 1"><img src="file6.jpg" alt="Πλεκτή Φούστα 1" loading="lazy"></a>
+    <a href="file7.jpg" data-lightbox="gallery" data-title="Πλεκτή Φούστα 2"><img src="file7.jpg" alt="Πλεκτή Φούστα 2" loading="lazy"></a>
+    <a href="file8.jpg" data-lightbox="gallery" data-title="Φανέλα 1"><img src="file8.jpg" alt="Φανέλα 1" loading="lazy"></a>
+    <a href="file9.jpg" data-lightbox="gallery" data-title="Φανέλα 2"><img src="file9.jpg" alt="Φανέλα 2" loading="lazy"></a>
   </div>
 </section>
 
@@ -176,6 +194,26 @@
   &copy; 2025 Αφοί Στεφανίδη. Όλα τα δικαιώματα διατηρούνται.
 </footer>
 
+<!-- Lightbox Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<script>
+  // Custom close on click
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.lightboxOverlay').forEach(el => {
+      el.addEventListener('click', function () {
+        const closeBtn = document.querySelector('.lightbox .lb-close');
+        if (closeBtn) closeBtn.click();
+      });
+    });
+  });
+
+  // Make sure lightbox overlays close on image click
+  document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('lb-image')) {
+      document.querySelector('.lightbox .lb-close')?.click();
+    }
+  });
+</script>
+
 </body>
 </html>
