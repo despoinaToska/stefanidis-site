@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Βιοτεχνία Πλεκτών - Αφοί Στεφανίδη | Πλεκτά Χονδρικής</title>
-  <meta name="description" content="Πλεκτά γυναικεία ρούχα χονδρικής παραγωγής στην Ελλάδα. Η Βιοτεχνία Αφοί Στεφανίδη στον Κορυδαλλό προσφέρει ζακέτες, μπλούζες, φούστες & κολάν με άμεση εξυπηρέτηση.">
-  <meta name="keywords" content="πλεκτά ρούχα, βιοτεχνία πλεκτών, χονδρική πλεκτών, γυναικεία πλεκτά, κορυδαλλός πλεκτά, ζακέτες, μπλούζες, πλεκτές φούστες, ελληνική παραγωγή">
+  <meta name="description" content="Πλεκτά γυναικεία ρούχα χονδρικής παραγωγής στην Ελλάδα.">
+  <meta name="keywords" content="πλεκτά ρούχα, βιοτεχνία, χονδρική, γυναικεία">
   <meta name="author" content="Αφοί Στεφανίδη">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
 
-  <!-- Lightbox CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 
   <style>
     body {
@@ -49,10 +49,6 @@
       color: #2c3e50;
     }
 
-    ul li {
-      margin-bottom: 8px;
-    }
-
     .photos {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -60,18 +56,17 @@
     }
 
     .photos a {
-      position: relative;
       overflow: hidden;
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
     }
 
-    .photos a img {
+    .photos img {
       width: 100%;
       aspect-ratio: 4 / 5;
       object-fit: cover;
-      transition: transform 0.3s ease;
       display: block;
+      transition: transform 0.3s ease;
     }
 
     .photos a:hover img {
@@ -103,25 +98,6 @@
       text-decoration: underline;
     }
   </style>
-
-  <!-- SEO Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Βιοτεχνία Πλεκτών - Αφοί Στεφανίδη",
-    "image": "https://example.com/file.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Ζωοδόχου Πηγής 12 & Πυθαγόρα",
-      "addressLocality": "Κορυδαλλός",
-      "postalCode": "18120",
-      "addressCountry": "GR"
-    },
-    "telephone": "+302104951582",
-    "url": "https://yourdomain.gr"
-  }
-  </script>
 </head>
 <body>
 
@@ -139,45 +115,38 @@
 
 <section>
   <h2>Σχετικά με εμάς</h2>
-  <p>Η <strong>Βιοτεχνία Πλεκτών Αφοί Στεφανίδη</strong> με έδρα τον <strong>Κορυδαλλό</strong>, δραστηριοποιείται στη <strong>χονδρική παραγωγή γυναικείων πλεκτών ρούχων</strong>. Παράγουμε αποκλειστικά στην Ελλάδα, προσφέροντας <strong>πλεκτές μπλούζες, ζακέτες, φούστες, φανέλες και κολάν</strong>.</p>
-  <p>Αν ψάχνετε <strong>πλεκτά χονδρικής</strong> για επαγγελματική χρήση ή μεταπώληση, είμαστε ο κατάλληλος συνεργάτης. Συνδυάζουμε ποιότητα, συνέπεια και ανταγωνιστικές τιμές.</p>
-  <ul>
-    <li>Πλεκτές μπλούζες</li>
-    <li>Πλεκτές ζακέτες</li>
-    <li>Πλεκτές φούστες</li>
-    <li>Πλεκτά κολάν</li>
-    <li>Φανέλες (70% μαλλί - 30% ακρυλικό)</li>
-    <li>Γυναικεία πλεκτά ρούχα για καταστήματα & χονδρική διανομή</li>
-  </ul>
+  <p>Η <strong>Βιοτεχνία Πλεκτών Αφοί Στεφανίδη</strong> στον <strong>Κορυδαλλό</strong> εξειδικεύεται στη <strong>χονδρική παραγωγή γυναικείων πλεκτών ρούχων</strong>. Παράγουμε αποκλειστικά στην Ελλάδα, προσφέροντας <strong>μπλούζες, ζακέτες, φούστες και κολάν</strong>.</p>
+</section>
+
+<section>
+  <h2>Φωτογραφίες Προϊόντων</h2>
+  <div class="photos">
+    <a href="file.jpg" data-fancybox="gallery" data-caption="Πλεκτή μπλούζα 1">
+      <img src="file.jpg" alt="Πλεκτή μπλούζα 1">
+    </a>
+    <a href="file1.jpg" data-fancybox="gallery" data-caption="Πλεκτή μπλούζα 2">
+      <img src="file1.jpg" alt="Πλεκτή μπλούζα 2">
+    </a>
+    <a href="file2.jpg" data-fancybox="gallery" data-caption="Ζακέτα 1">
+      <img src="file2.jpg" alt="Ζακέτα 1">
+    </a>
+    <a href="file3.jpg" data-fancybox="gallery" data-caption="Ζακέτα 2">
+      <img src="file3.jpg" alt="Ζακέτα 2">
+    </a>
+    <a href="file4.jpg" data-fancybox="gallery" data-caption="Πλεκτό Κολάν 1">
+      <img src="file4.jpg" alt="Πλεκτό Κολάν 1">
+    </a>
+    <a href="file5.jpg" data-fancybox="gallery" data-caption="Πλεκτό Κολάν 2">
+      <img src="file5.jpg" alt="Πλεκτό Κολάν 2">
+    </a>
+  </div>
 </section>
 
 <section>
   <h2>Επικοινωνία</h2>
   <p><strong>Διεύθυνση:</strong> Ζωοδόχου Πηγής 12 & Πυθαγόρα, 18120, Κορυδαλλός</p>
   <p><strong>Τηλέφωνο:</strong> <a href="tel:+302104951582">210 4951582</a></p>
-  <p><strong>Κινητό:</strong> <a href="tel:+306981355841">6981 355841</a></p>
   <p><strong>Email:</strong> <a href="mailto:afoistefanidi@gmail.com">afoistefanidi@gmail.com</a></p>
-</section>
-
-<section>
-  <h2>Τρόποι Πληρωμής</h2>
-  <p>Μετρητά</p>
-</section>
-
-<section>
-  <h2>Φωτογραφίες Προϊόντων</h2>
-  <div class="photos">
-    <a href="file.jpg" data-lightbox="gallery" data-title="Πλεκτή μπλούζα 1"><img src="file.jpg" alt="Πλεκτή μπλούζα 1" loading="lazy"></a>
-    <a href="file1.jpg" data-lightbox="gallery" data-title="Πλεκτή μπλούζα 2"><img src="file1.jpg" alt="Πλεκτή μπλούζα 2" loading="lazy"></a>
-    <a href="file2.jpg" data-lightbox="gallery" data-title="Πλεκτή Ζακέτα 1"><img src="file2.jpg" alt="Πλεκτή Ζακέτα 1" loading="lazy"></a>
-    <a href="file3.jpg" data-lightbox="gallery" data-title="Πλεκτή Ζακέτα 2"><img src="file3.jpg" alt="Πλεκτή Ζακέτα 2" loading="lazy"></a>
-    <a href="file4.jpg" data-lightbox="gallery" data-title="Πλεκτό Κολάν 1"><img src="file4.jpg" alt="Πλεκτό Κολάν 1" loading="lazy"></a>
-    <a href="file5.jpg" data-lightbox="gallery" data-title="Πλεκτό Κολάν 2"><img src="file5.jpg" alt="Πλεκτό Κολάν 2" loading="lazy"></a>
-    <a href="file6.jpg" data-lightbox="gallery" data-title="Πλεκτή Φούστα 1"><img src="file6.jpg" alt="Πλεκτή Φούστα 1" loading="lazy"></a>
-    <a href="file7.jpg" data-lightbox="gallery" data-title="Πλεκτή Φούστα 2"><img src="file7.jpg" alt="Πλεκτή Φούστα 2" loading="lazy"></a>
-    <a href="file8.jpg" data-lightbox="gallery" data-title="Φανέλα 1"><img src="file8.jpg" alt="Φανέλα 1" loading="lazy"></a>
-    <a href="file9.jpg" data-lightbox="gallery" data-title="Φανέλα 2"><img src="file9.jpg" alt="Φανέλα 2" loading="lazy"></a>
-  </div>
 </section>
 
 <section>
@@ -194,45 +163,15 @@
   &copy; 2025 Αφοί Στεφανίδη. Όλα τα δικαιώματα διατηρούνται.
 </footer>
 
-<!-- Lightbox Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<!-- Fancybox JS -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Περιμένουμε για δυναμικά στοιχεία της Lightbox
-    const observer = new MutationObserver(() => {
-      const image = document.querySelector('.lb-image');
-      const overlay = document.querySelector('.lightboxOverlay');
-      const closeBtn = document.querySelector('.lb-close');
-
-      // Αν βρέθηκε η εικόνα (δηλαδή έχει ανοίξει το lightbox)
-      if (image && closeBtn) {
-        // Αν δεν έχει ήδη listener
-        if (!image.dataset.listenerAttached) {
-          image.addEventListener('click', () => {
-            closeBtn.click();
-          });
-          image.dataset.listenerAttached = "true";
-        }
-      }
-
-      // Προσθέτουμε click και στο background (προαιρετικό)
-      if (overlay && closeBtn) {
-        overlay.addEventListener('click', function (e) {
-          // Μόνο αν πατήσει απευθείας στο overlay (όχι σε άλλο στοιχείο μέσα του)
-          if (e.target.classList.contains('lightboxOverlay')) {
-            closeBtn.click();
-          }
-        });
-      }
-    });
-
-    // Ξεκινάμε τον παρατηρητή για αλλαγές στο body (Lightbox προσθέτει τα στοιχεία δυναμικά)
-    observer.observe(document.body, { childList: true, subtree: true });
+  Fancybox.bind("[data-fancybox='gallery']", {
+    click: "close",
+    Toolbar: false,
+    Thumbs: false,
   });
 </script>
-
-
-
 
 </body>
 </html>
