@@ -197,17 +197,28 @@
 <!-- Lightbox Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 <script>
-  // Περιμένουμε να εμφανιστεί η Lightbox εικόνα
-  document.addEventListener("DOMContentLoaded", function () {
-    document.body.addEventListener("click", function (e) {
-      // Αν η εικόνα ή το overlay έχουν κλικ
-      if (e.target.classList.contains("lb-image") || e.target.classList.contains("lightboxOverlay")) {
-        const closeBtn = document.querySelector(".lightbox .lb-close");
-        if (closeBtn) closeBtn.click();
+  document.addEventListener('DOMContentLoaded', function () {
+    // Περιμένουμε κάθε φορά που ανοίγει ένα lightbox
+    document.addEventListener('click', function (e) {
+      // Αν η Lightbox εικόνα είναι ανοιχτή
+      const overlay = document.querySelector('.lightboxOverlay');
+      const closeBtn = document.querySelector('.lb-close');
+
+      if (!overlay || !closeBtn) return;
+
+      // Αν πατήσει πάνω στην εικόνα
+      if (e.target.classList.contains('lb-image')) {
+        closeBtn.click();
+      }
+
+      // Αν πατήσει στο σκοτεινό background
+      if (e.target.classList.contains('lightboxOverlay')) {
+        closeBtn.click();
       }
     });
   });
 </script>
+
 
 
 </body>
