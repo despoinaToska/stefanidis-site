@@ -11,17 +11,17 @@
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
-      background-color: #f0f4f8;
+      background-color: #e9f5fb;
       margin: 0;
       padding: 0;
       color: #333;
     }
 
     header {
-      background: linear-gradient(to right, #6a4f8a, #b07d52);
+      background: linear-gradient(to right, #4a90e2, #50e3c2);
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 60px 20px;
       position: relative;
     }
 
@@ -31,7 +31,8 @@
     }
 
     header p {
-      font-size: 1.3em;
+      font-size: 1.5em;
+      font-weight: bold;
     }
 
     section {
@@ -45,7 +46,7 @@
 
     h1, h2 {
       font-family: 'Playfair Display', serif;
-      color: #6a4f8a;
+      color: #4a90e2;
     }
 
     ul li {
@@ -53,22 +54,22 @@
     }
 
     .photos {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
+      justify-items: center;
     }
 
     .photos img {
-      width: 280px;
-      height: 350px;
+      width: 100%;
+      height: auto;
       object-fit: cover;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
 
     a {
-      color: #6a4f8a;
+      color: #4a90e2;
       text-decoration: none;
     }
 
@@ -88,7 +89,7 @@
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
-      background-color: #eee;
+      background-color: #f1f1f1;
       color: #666;
     }
   </style>
