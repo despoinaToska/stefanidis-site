@@ -21,6 +21,7 @@
 <meta property="og:url" content="https://afoistefanidi.gr/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Βιοτεχνία Πλεκτών Αφοί Στεφανίδη","description":"Χονδρική παραγωγή πλεκτών ρούχων από το 1952. Κορυδαλλός Αττική.","url":"https://afoistefanidi.gr/","telephone":["+302104951582","+306981355841","+306974461385"],"email":"afoistefanidi@gmail.com","foundingDate":"1952","address":{"@type":"PostalAddress","streetAddress":"Ζωοδόχου Πηγής 12 & Πυθαγόρα","addressLocality":"Κορυδαλλός","postalCode":"18120","addressCountry":"GR"},"geo":{"@type":"GeoCoordinates","latitude":"37.9867","longitude":"23.6538"}}</script>
 
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230c0e12'/%3E%3Ctext x='32' y='46' font-family='Georgia%2C serif' font-size='42' font-weight='400' fill='%23c9a96e' text-anchor='middle'%3E%CE%A3%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700;800&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
@@ -536,22 +537,8 @@ body::before {
 }
 .cf-fb-link {
   position: absolute; inset: 0; z-index: 5;
-  display: flex; align-items: center; justify-content: center;
-  opacity: 0; transition: opacity 0.4s;
 }
-.cf-slide.active .cf-fb-link { opacity: 1; }
-.cf-fb-btn {
-  width: 52px; height: 52px; border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.4);
-  background: rgba(8,8,8,0.6); backdrop-filter: blur(8px);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--white);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem; font-weight: 400; letter-spacing: 0;
-  transition: all 0.4s var(--R);
-  text-decoration: none;
-}
-.cf-fb-btn:hover { background: var(--gold); border-color: var(--gold); color: var(--black); }
+/* cf-fb-btn removed */
 
 /* Slide positions */
 .cf-slide[data-pos="-2"] { transform: translateX(-260%) translateZ(-600px) rotateY(45deg); opacity: 0.2; filter: brightness(0.3); pointer-events: none; }
@@ -1068,9 +1055,7 @@ slides.forEach((s,i)=>{
   el.innerHTML = `
     <div class="cf-slide-inner">
       <img src="${s.src}" alt="${s.cap}" loading="${i===0?'eager':'lazy'}">
-      <a href="${s.src}" data-fancybox="gallery" data-caption="${s.cap}" class="cf-fb-link">
-        <div class="cf-fb-btn">Σ</div>
-      </a>
+      <a href="${s.src}" data-fancybox="gallery" data-caption="${s.cap}" class="cf-fb-link" aria-label="${s.cap}"></a>
       <div class="cf-slide-overlay">
         <span class="cf-slide-num">${s.n} / 0${N}</span>
         <span class="cf-slide-name">${s.cap}</span>
