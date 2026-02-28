@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Βιοτεχνία Πλεκτών - Αφοί Στεφανίδη | Πλεκτά Χονδρικής</title>
+<title>Βιοτεχνία Πλεκτών Στεφανίδης | Χονδρική – Κορυδαλλός</title>
 <meta name="description" content="Πλεκτά γυναικεία ρούχα ελληνικής παραγωγής, χονδρικής πώλησης. Ζακέτες, μπλούζες, φούστες, φανέλες και κολάν από τη Βιοτεχνία Αφοί Στεφανίδη στον Κορυδαλλό.">
 <meta name="keywords" content="πλεκτά χονδρικής, βιοτεχνία πλεκτών, κορυδαλλός, πλεκτά ρούχα, στεφανίδης, ζακέτες, φούστες, φανέλες, ελληνική παραγωγή, knitwear wholesale greece, athens knitwear">
 <meta name="author" content="Αφοί Στεφανίδη">
@@ -55,8 +55,11 @@ body {
   background: var(--black);
   color: var(--white);
   overflow-x: hidden;
-  cursor: none;
 }
+
+/* cursor hidden globally */
+* { cursor: default !important; }
+a, button { cursor: pointer !important; }
 
 /* ════ GRAIN OVERLAY ════ */
 body::before {
@@ -79,34 +82,7 @@ body::before {
   80% { background-position: 70px -30px; }
 }
 
-/* ════ CUSTOM CURSOR ════ */
-#cursor {
-  position: fixed;
-  width: 10px; height: 10px;
-  background: var(--gold);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99999;
-  transform: translate(-50%,-50%);
-  transition: transform 0.1s, width 0.4s var(--R), height 0.4s var(--R), opacity 0.4s;
-  will-change: transform;
-}
-#cursor-ring {
-  position: fixed;
-  width: 36px; height: 36px;
-  border: 1px solid rgba(184,149,90,0.5);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 99998;
-  transform: translate(-50%,-50%);
-  transition: transform 0.15s, width 0.6s var(--R), height 0.6s var(--R), opacity 0.4s, border-color 0.4s;
-  will-change: transform;
-}
-body:has(a:hover) #cursor, body:has(button:hover) #cursor { width: 6px; height: 6px; }
-body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
-  width: 60px; height: 60px;
-  border-color: rgba(184,149,90,0.8);
-}
+/* cursor removed */
 
 /* ════ PAGE LOADER ════ */
 #loader {
@@ -204,7 +180,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
   font-family: 'Syne', sans-serif; font-size: 0.65rem;
   letter-spacing: 0.2em; text-transform: uppercase;
   color: rgba(255,255,255,0.55); text-decoration: none;
-  position: relative; transition: color 0.3s; cursor: none;
+  position: relative; transition: color 0.3s;
 }
 .nav-links a::after {
   content: ''; position: absolute; bottom: -4px; left: 0;
@@ -221,7 +197,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .nav-cta:hover { background: var(--gold); color: var(--black) !important; border-color: var(--gold) !important; }
 .hbg {
   display: none; flex-direction: column; gap: 5px;
-  background: none; border: none; cursor: none; padding: 4px;
+  background: none; border: none; padding: 4px;
 }
 .hbg span { display: block; width: 22px; height: 1px; background: var(--white); transition: var(--T); }
 .mob { display: none; position: fixed; top: 72px; left: 0; right: 0;
@@ -230,7 +206,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .mob.open { display: block; }
 .mob a { display: block; padding: 14px 0; font-family: 'Syne', sans-serif; font-size: 0.7rem;
   letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.7);
-  text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.05); cursor: none; }
+  text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
 .mob a:last-child { color: var(--gold); border-bottom: none; margin-top: 8px; }
 
 /* ════ HERO ════ */
@@ -327,7 +303,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
   background: var(--gold); color: var(--black);
   font-family: 'Syne', sans-serif; font-size: 0.68rem;
   font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
-  text-decoration: none; border-radius: 1px; cursor: none;
+  text-decoration: none; border-radius: 1px;
   transition: background 0.4s var(--R), transform 0.4s var(--R), box-shadow 0.4s;
   position: relative; overflow: hidden;
 }
@@ -346,7 +322,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
   border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.75);
   font-family: 'Syne', sans-serif; font-size: 0.68rem;
   font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase;
-  text-decoration: none; border-radius: 1px; cursor: none;
+  text-decoration: none; border-radius: 1px;
   transition: all 0.4s var(--R);
 }
 .btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
@@ -527,7 +503,6 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
   position: absolute;
   width: clamp(200px, 26vw, 340px);
   height: 100%;
-  cursor: none;
   transition: transform 0.7s var(--R), opacity 0.7s var(--R), filter 0.7s;
   user-select: none;
   will-change: transform;
@@ -567,10 +542,12 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .cf-slide.active .cf-fb-link { opacity: 1; }
 .cf-fb-btn {
   width: 52px; height: 52px; border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.3);
-  background: rgba(8,8,8,0.5); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(8,8,8,0.6); backdrop-filter: blur(8px);
   display: flex; align-items: center; justify-content: center;
-  color: var(--white); font-size: 1.1rem;
+  color: var(--white);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem; font-weight: 400; letter-spacing: 0;
   transition: all 0.4s var(--R);
   text-decoration: none;
 }
@@ -593,7 +570,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
   width: 52px; height: 52px; border-radius: 50%;
   border: 1px solid rgba(255,255,255,0.15);
   background: transparent; color: rgba(255,255,255,0.6);
-  font-size: 1rem; cursor: none;
+  font-size: 1rem;
   display: flex; align-items: center; justify-content: center;
   transition: all 0.4s var(--R);
 }
@@ -602,7 +579,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
 .cf-dot {
   width: 6px; height: 6px; border-radius: 50%;
   background: rgba(255,255,255,0.2);
-  cursor: none; transition: all 0.4s var(--R); border: none;
+  transition: all 0.4s var(--R); border: none;
 }
 .cf-dot.on { background: var(--gold); transform: scale(1.3); }
 .cf-counter {
@@ -694,7 +671,7 @@ body:has(a:hover) #cursor-ring, body:has(button:hover) #cursor-ring {
   padding: 16px 24px; border-radius: 1px;
   font-family: 'Syne', sans-serif; font-size: 0.65rem;
   font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
-  text-decoration: none; cursor: none; transition: all 0.4s var(--R);
+  text-decoration: none; transition: all 0.4s var(--R);
 }
 .cta-gold { background: var(--gold); color: var(--black); }
 .cta-gold:hover { background: var(--gold3); transform: translateY(-2px); box-shadow: 0 16px 40px rgba(184,149,90,0.25); }
@@ -730,7 +707,7 @@ footer {
 .ft-brand em { color: var(--gold); font-style: italic; }
 .ft-sub { font-family: 'Syne', sans-serif; font-size: 0.52rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-top: 4px; }
 .ft-nav { display: flex; gap: 28px; flex-wrap: wrap; }
-.ft-nav a { font-family: 'Syne', sans-serif; font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.3s; cursor: none; }
+.ft-nav a { font-family: 'Syne', sans-serif; font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.3s; }
 .ft-nav a:hover { color: var(--gold); }
 .ft-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-top: 20px; }
 .ft-copy { font-size: 0.74rem; color: rgba(255,255,255,0.18); }
@@ -741,7 +718,7 @@ footer {
   width: 56px; height: 56px; border-radius: 50%;
   background: #25d366; display: flex; align-items: center; justify-content: center;
   text-decoration: none; box-shadow: 0 8px 28px rgba(37,211,102,0.4);
-  transition: transform 0.4s var(--R), box-shadow 0.4s; cursor: none;
+  transition: transform 0.4s var(--R), box-shadow 0.4s;
 }
 .wa-float:hover { transform: scale(1.12); box-shadow: 0 16px 40px rgba(37,211,102,0.5); }
 .wa-float img { width: 28px; height: 28px; }
@@ -766,9 +743,7 @@ footer {
 </head>
 <body>
 
-<!-- CURSOR -->
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
+<!-- cursor removed -->
 
 <!-- LOADER -->
 <div id="loader">
@@ -830,7 +805,6 @@ footer {
   </div>
   <div class="hero-scroll">
     <div class="hero-scroll-line"></div>
-    <span>Κάντε κύλιση</span>
   </div>
 </section>
 
@@ -904,7 +878,6 @@ footer {
         <h2 class="s-title" style="color:var(--white)">Η συλλογή μας <em>σε εικόνες</em></h2>
         <div class="s-rule"></div>
       </div>
-      <p class="prod-header-right">Κάντε κλικ στην κεντρική εικόνα για πλήρη προβολή. Σαρώστε ή χρησιμοποιήστε τα βέλη.</p>
     </div>
 
     <div class="cf-stage reveal" id="cfStage">
@@ -982,7 +955,7 @@ footer {
           </li>
           <li class="contact-item">
             <div class="contact-ico">✉</div>
-            <div><div class="contact-lbl">Email</div><a href="mailto:afoistefanidi@gmail.com" class="contact-val">afoistefanidi@gmail.com</a></div>
+            <div><div class="contact-lbl">Email</div><a href="/cdn-cgi/l/email-protection#82e3e4edebf1f6e7e4e3ecebe6ebc2e5efe3ebeeace1edef" class="contact-val"><span class="__cf_email__" data-cfemail="d0b1b6bfb9a3a4b5b6b1beb9b4b990b7bdb1b9bcfeb3bfbd">[email&#160;protected]</span></a></div>
           </li>
         </ul>
         <div class="cta-group">
@@ -991,7 +964,7 @@ footer {
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="16" height="16" alt="" style="filter:invert(54%) sepia(80%) saturate(500%) hue-rotate(89deg) brightness(103%)">
             WhatsApp
           </a>
-          <a href="mailto:afoistefanidi@gmail.com" class="cta-btn cta-ghost">✉ Στείλτε Email</a>
+          <a href="/cdn-cgi/l/email-protection#6302050c0a10170605020d0a070a23040e020a0f4d000c0e" class="cta-btn cta-ghost">✉ Στείλτε Email</a>
         </div>
       </div>
       <div class="reveal d2">
@@ -1030,24 +1003,10 @@ footer {
 </a>
 
 <!-- Fancybox -->
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 
 <script>
-/* ══════════════════════════════════
-   CUSTOM CURSOR
-══════════════════════════════════ */
-const cur = document.getElementById('cursor');
-const curR = document.getElementById('cursor-ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; });
-(function animCursor(){
-  rx += (mx-rx)*0.18; ry += (my-ry)*0.18;
-  cur.style.left  = mx+'px'; cur.style.top  = my+'px';
-  curR.style.left = rx+'px'; curR.style.top = ry+'px';
-  requestAnimationFrame(animCursor);
-})();
-document.addEventListener('mouseleave', ()=>{ cur.style.opacity='0'; curR.style.opacity='0'; });
-document.addEventListener('mouseenter', ()=>{ cur.style.opacity='1'; curR.style.opacity='1'; });
+/* cursor removed */
 
 /* ══════════════════════════════════
    LOADER
@@ -1110,7 +1069,7 @@ slides.forEach((s,i)=>{
     <div class="cf-slide-inner">
       <img src="${s.src}" alt="${s.cap}" loading="${i===0?'eager':'lazy'}">
       <a href="${s.src}" data-fancybox="gallery" data-caption="${s.cap}" class="cf-fb-link">
-        <div class="cf-fb-btn">⊕</div>
+        <div class="cf-fb-btn">Σ</div>
       </a>
       <div class="cf-slide-overlay">
         <span class="cf-slide-num">${s.n} / 0${N}</span>
@@ -1206,9 +1165,4 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 <!-- SEO multilingual hidden -->
 <div style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true">
   <p lang="en">Knitwear wholesale manufacturer Korydallos Athens Greece. Women's knitted garments cardigans blouses skirts leggings woolen undershirts. Greek production since 1952. Stefanidi Brothers knitwear wholesale.</p>
-  <p lang="bg">Търговец на едро на плетени дрехи Корядалос Атина Гърция. Гръцко производство от 1952.</p>
-  <p lang="ro">Producător angro tricotaje Korydallos Atena Grecia. Producție grecească din 1952.</p>
-  <p lang="de">Strickwaren Großhändler Korydallos Athen Griechenland. Griechische Produktion seit 1952.</p>
-</div>
-</body>
-</html>
+  <p lang="bg">Търговец на едро на плетени дрехи Корядалос Атина Гър�
